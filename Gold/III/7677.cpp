@@ -45,9 +45,10 @@ ll f(ll x) {
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
 	ll n;
-    cin >> n;
-    while(n!=-1){
-        if (!n) cout << 0 << '\n';
-        cout << f(n) << '\n';
-    }
+	cin >> n;
+	while (n != -1) {
+		if (!n) cout << 0 << '\n';
+		else cout << f(n) << '\n';
+		cin >> n;
+	}
 }
