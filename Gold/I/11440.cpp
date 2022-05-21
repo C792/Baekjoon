@@ -5,7 +5,7 @@ typedef unsigned long long ll;
 
 using namespace std;
 
-constexpr ll re = 1'000'000'000;
+constexpr ll re = 1'000'000'007;
 
 struct Det {
 	ll data[2][2];
