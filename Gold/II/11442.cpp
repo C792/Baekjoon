@@ -5,7 +5,7 @@ typedef unsigned long long ll;
 
 using namespace std;
 
-constexpr ll re = 1000000007;
+constexpr ll re = 1'000'000'007;
 
 struct Det {
 	ll data[2][2];
@@ -13,10 +13,10 @@ struct Det {
 
 Det prod(Det a, Det b) {
 	Det c;
-	c.data[0][0] = (a.data[0][0] * b.data[0][0] + a.data[0][1] * b.data[1][0])%re;
-	c.data[0][1] = (a.data[0][0] * b.data[0][1] + a.data[0][1] * b.data[1][1])%re;
-	c.data[1][0] = (a.data[1][0] * b.data[0][0] + a.data[1][1] * b.data[1][0])%re;
-	c.data[1][1] = (a.data[1][0] * b.data[0][1] + a.data[1][1] * b.data[1][1])%re;
+	c.data[0][0] = (a.data[0][0] * b.data[0][0] + a.data[0][1] * b.data[1][0]) % re;
+	c.data[0][1] = (a.data[0][0] * b.data[0][1] + a.data[0][1] * b.data[1][1]) % re;
+	c.data[1][0] = (a.data[1][0] * b.data[0][0] + a.data[1][1] * b.data[1][0]) % re;
+	c.data[1][1] = (a.data[1][0] * b.data[0][1] + a.data[1][1] * b.data[1][1]) % re;
 	return c;
 }
 
@@ -48,7 +48,7 @@ int main() {
 	cin >> n;
 	if (!n) cout << 0;
 	else {
-		n = (n / 2) * 2;
+		n = ((n - 1) / 2) * 2;
 		cout << f(n + 2);
 	}
 }
